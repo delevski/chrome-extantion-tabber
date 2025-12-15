@@ -1,0 +1,153 @@
+:root {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f8f9fa;
+  --text-main: #202124;
+  --text-secondary: #5f6368;
+  --accent-color: #1a73e8;
+  --danger-color: #d93025;
+  --border-color: #dadce0;
+  --hover-color: #f1f3f4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-bg: #292a2d;
+    --secondary-bg: #35363a;
+    --text-main: #e8eaed;
+    --text-secondary: #9aa0a6;
+    --border-color: #5f6368;
+    --hover-color: #3c4043;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-main);
+  width: 400px;
+  min-height: 200px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 16px;
+  background-color: var(--primary-bg);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+h1 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.stats {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.table-header {
+  display: flex;
+  padding: 8px 16px;
+  background-color: var(--secondary-bg);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.col-title { flex: 1; padding-right: 8px; }
+.col-pid { width: 40px; text-align: right; }
+.col-mem { width: 70px; text-align: right; }
+.col-action { width: 40px; text-align: center; }
+
+.tab-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+  font-size: 13px;
+}
+
+.tab-item:hover {
+  background-color: var(--hover-color);
+}
+
+.tab-info {
+  flex: 1;
+  min-width: 0; /* Enable truncation */
+  padding-right: 8px;
+}
+
+.tab-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  display: block;
+}
+
+.tab-domain {
+  font-size: 11px;
+  color: var(--text-secondary);
+  display: block;
+  margin-top: 2px;
+}
+
+.tab-pid {
+  width: 40px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.tab-mem {
+  width: 70px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.tab-close {
+  width: 40px;
+  text-align: center;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.btn-close:hover {
+  color: var(--danger-color);
+  background-color: rgba(217, 48, 37, 0.1);
+}
+
+.loading-state {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab & Memory Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tab Analyzer</h1>
+      <div class="stats">
+        <span id="total-tabs">Loading...</span> active tabs
+      </div>
+      <div class="stats-memory">
+         <span id="total-memory"></span>
+      </div>
+    </header>
+    
+    <main>
+      <div class="table-header">
+        <div class="col-title">Tab / Domain</div>
+        <div class="col-pid">PID</div>
+        <div class="col-mem">Memory</div>
+        <div class="col-action">Action</div>
+      </div>
+      <div id="tab-list" class="tab-list">
+        <!-- Tab items will be injected here -->
+        <div class="loading-state">Analyzing tabs and memory...</div>
+      </div>
+    </main>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

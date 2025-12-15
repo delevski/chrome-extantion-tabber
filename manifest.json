@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Tab & Memory Analyzer",
+  "version": "1.0",
+  "description": "Analyzes open tabs and displays memory usage per tab and domain.",
+  "permissions": [
+    "tabs",
+    "processes",
+    "system.memory"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tab Memory Analyzer"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
